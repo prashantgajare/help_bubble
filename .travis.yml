@@ -47,7 +47,7 @@ before_script:
   # Enable required modules and ignore any output to not break the test.
   - drush --yes pm-enable help_bubble
 
-script:
-  # Run the tests and make sure we exit with the right status.
-  - php scripts/run-tests.sh --verbose --color --php `which php` --url http://127.0.0.1 --xml /tmp "Deployment"
-  - if [[ `grep -e 'type="\(failure\|exception\)"\|Fatal error' /tmp/*TestCase.xml` ]]; then exit 1; fi
+# script:
+#   # Run the tests and make sure we exit with the right status.
+#   - php scripts/run-tests.sh --verbose --color --php `which php` --url http://127.0.0.1 --xml /tmp "Deployment"
+#   - if [[ `grep -e 'type="\(failure\|exception\)"\|Fatal error' /tmp/*TestCase.xml` ]]; then exit 1; fi
